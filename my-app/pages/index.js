@@ -37,9 +37,9 @@ export default function Home() {
 
     // If user is not connected to the Rinkeby network, let them know and throw an error
     const { chainId } = await web3Provider.getNetwork();
-    if (chainId !== 4) {
-      window.alert("Change the network to Rinkeby");
-      throw new Error("Change network to Rinkeby");
+    if (chainId !== 11155111) {
+      window.alert("Change the network to Sepolia");
+      throw new Error("Change network to Sepolia");
     }
 
     if (needSigner) {
@@ -211,10 +211,6 @@ export default function Home() {
           <img className={styles.image} src="./crypto-devs.svg" />
         </div>
       </div>
-
-      <footer className={styles.footer}>
-        Made with &#10084; by Crypto Devs
-      </footer>
     </div>
   );
 }
